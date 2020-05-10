@@ -1,19 +1,15 @@
 <template>
-	<fieldset v-if="fields && groupVisible(group)"
-		:is="tag"
-		:class="[groupRowClasses, validationClass]"
-		ref="group">
-		<slot
-			name="group-legend"
-			:group="group"
-			:group-legend="groupLegend"></slot>
-		<slot
-			name="group-help"
-			:group="group"></slot>
+	<fieldset v-if="fields && groupVisible(group)" 
+:is="tag" :class="[groupRowClasses, validationClass]" ref="group">
+		<slot name="group-legend" 
+:group="group" :group-legend="groupLegend"></slot>
+		<slot name="group-help" 
+:group="group"></slot>
 		<template v-for="(field, index) in fields">
 			<template v-if="fieldVisible(field)">
 				<template v-if="field.type === 'group'">
-					<form-group :fields="field.fields"
+					<form-group
+						:fields="field.fields"
 						:group="field"
 						:tag="getGroupTag(field)"
 						:model="model"
@@ -21,25 +17,23 @@
 						:errors="errors"
 						:event-bus="eventBus"
 						:key="index">
-						<template
-							slot="group-legend"
-							slot-scope="slotProps">
+						<template slot="group-legend" 
+slot-scope="slotProps">
 							<slot
 								name="group-legend"
 								:group="slotProps.group"
 								:group-legend="slotProps.groupLegend"></slot>
 						</template>
-						<template
-							slot="group-help"
-							slot-scope="slotProps">
-							<slot
-								name="group-help"
-								:group="slotProps.group"></slot>
+						<template slot="group-help" 
+slot-scope="slotProps">
+							<slot name="group-help" 
+:group="slotProps.group"></slot>
 						</template>
 
-						<template slot="element"
-							slot-scope="slotProps">
-							<slot name="element"
+						<template slot="element" 
+slot-scope="slotProps">
+							<slot
+								name="element"
 								:field="slotProps.field"
 								:model="slotProps.model"
 								:options="slotProps.options"
@@ -49,7 +43,8 @@
 					</form-group>
 				</template>
 				<template v-else>
-					<slot name="element"
+					<slot
+						name="element"
 						:field="field"
 						:model="model"
 						:options="options"

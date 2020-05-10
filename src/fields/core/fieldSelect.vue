@@ -1,29 +1,28 @@
 <template>
-	<select class="form-control"
+	<select
+		class="form-control"
 		v-model="value"
 		:disabled="disabled"
 		:name="inputName"
 		:id="fieldID"
 		:class="fieldClasses"
 		v-attributes="'input'">
-		<option v-if="!fieldOptions.hideNoneSelectedText"
-			:disabled="schema.required"
-			:value="null"> {{ fieldOptions.noneSelectedText || "&lt;Nothing selected&gt;" }}
+		<option v-if="!fieldOptions.hideNoneSelectedText" 
+:disabled="schema.required" :value="null">
+			{{ fieldOptions.noneSelectedText || "&lt;Nothing selected&gt;" }}
 		</option>
 
 		<template v-for="item in items">
-			<optgroup v-if="item.group"
-				:label="getGroupName(item)"
-				:key="getItemValue(item)">
-				<option v-if="item.ops"
-					v-for="i in item.ops"
-					:value="getItemValue(i)"
-					:key="getItemValue(i)"> {{ getItemName(i) }}</option>
+			<optgroup v-if="item.group" 
+:label="getGroupName(item)" :key="getItemValue(item)">
+				<option v-if="item.ops" 
+v-for="i in item.ops" :value="getItemValue(i)" :key="getItemValue(i)">
+					{{ getItemName(i) }}</option>
 			</optgroup>
 
-			<option v-if="!item.group"
-				:value="getItemValue(item)"
-				:key="getItemValue(item)"> {{ getItemName(item) }}</option>
+			<option v-if="!item.group" 
+:value="getItemValue(item)" :key="getItemValue(item)">
+				{{ getItemName(item) }}</option>
 		</template>
 	</select>
 </template>

@@ -1037,7 +1037,10 @@ describe("VueFormGenerator.vue", () => {
 		it.skip("should be validation error if model value is not valid", () => {
 			onValidated.resetHistory();
 			wrapper.vm.model.name = "A";
-			field.validate().then(() => {}, () => {});
+			field.validate().then(
+				() => {},
+				() => {}
+			);
 
 			expect(form.errors).to.be.length(1);
 			expect(onValidated.callCount).to.be.equal(1);
@@ -1052,7 +1055,10 @@ describe("VueFormGenerator.vue", () => {
 		});
 
 		it.skip("should be 2 validation error", () => {
-			form.$children[1].validate().then(() => {}, () => {});
+			form.$children[1].validate().then(
+				() => {},
+				() => {}
+			);
 			expect(form.errors).to.be.length(2);
 			expect(form.errors[0].error).to.be.equal("The length of text is too small! Current: 1, Minimum: 3");
 			expect(form.errors[1].error).to.be.equal("Validation error!");
@@ -1061,7 +1067,10 @@ describe("VueFormGenerator.vue", () => {
 		it.skip("should only other field validation error", () => {
 			wrapper.vm.model.name = "Alan";
 			onValidated.resetHistory();
-			field.validate().then(() => {}, () => {});
+			field.validate().then(
+				() => {},
+				() => {}
+			);
 
 			expect(form.errors).to.be.length(1);
 			expect(onValidated.callCount).to.be.equal(1);
@@ -1122,7 +1131,10 @@ describe("VueFormGenerator.vue", () => {
 			onValidated.resetHistory();
 			wrapper.vm.model.name = "A";
 			// console.log(formGenerator.find({ name: "form-element" }).vm.$children[0].validate);
-			field.validate().then(() => {}, () => {});
+			field.validate().then(
+				() => {},
+				() => {}
+			);
 			Vue.config.errorHandler = done;
 			Vue.nextTick(() => {
 				expect(form.errors).to.be.length(1);

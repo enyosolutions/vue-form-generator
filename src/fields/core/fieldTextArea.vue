@@ -1,5 +1,6 @@
 <template>
-	<textarea class="form-control"
+	<textarea
+		class="form-control"
 		v-model="value"
 		:id="fieldID"
 		:class="fieldClasses"

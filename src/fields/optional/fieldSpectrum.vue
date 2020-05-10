@@ -1,11 +1,12 @@
 <template>
-	<input type="text"
+	<input
+		type="text"
 		:autocomplete="fieldOptions.autocomplete"
 		:disabled="disabled"
 		:placeholder="placeholder"
 		:readonly="readonly"
 		:name="inputName"
-		:id="fieldID" >
+		:id="fieldID"/>
 </template>
 
 <script>

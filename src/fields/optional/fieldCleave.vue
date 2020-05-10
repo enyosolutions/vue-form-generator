@@ -1,5 +1,6 @@
 <template>
-	<input class="form-control"
+	<input
+		class="form-control"
 		type="text"
 		:value="value"
 		:autocomplete="fieldOptions.autocomplete"
@@ -7,7 +8,7 @@
 		:placeholder="placeholder"
 		:readonly="readonly"
 		:name="inputName"
-		:id="fieldID">
+		:id="fieldID"/>
 </template>
 
 <script>

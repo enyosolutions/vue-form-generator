@@ -1,7 +1,8 @@
 <template>
-	<div class="wrapper"
-		v-attributes="'wrapper'">
-		<input class="form-control"
+	<div class="wrapper" 
+v-attributes="'wrapper'">
+		<input
+			class="form-control"
 			:id="fieldID"
 			:type="inputType"
 			:value="value"
@@ -37,10 +38,9 @@
 			:step="fieldOptions.step"
 			:width="fieldOptions.width"
 			:files="fieldOptions.files"
-			v-attributes="'input'">
-		<span class="helper"
-			v-if="inputType === 'color' || inputType === 'range'"
-			v-text="value"></span>
+			v-attributes="'input'"/>
+		<span class="helper" 
+v-if="inputType === 'color' || inputType === 'range'" v-text="value"></span>
 	</div>
 </template>
 

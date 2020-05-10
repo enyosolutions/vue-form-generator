@@ -1,5 +1,6 @@
 <template>
-	<div class="slider"
+	<div
+		class="slider"
 		:disabled="disabled"
 		:class="{ 'contain-pips': containPips, 'contain-tooltip': containTooltip }"></div>
 </template>

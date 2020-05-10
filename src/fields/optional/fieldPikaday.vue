@@ -1,12 +1,13 @@
 <template>
-	<input class="form-control"
+	<input
+		class="form-control"
 		type="text"
 		v-model="value"
 		:autocomplete="fieldOptions.autocomplete"
 		:disabled="disabled"
 		:placeholder="placeholder"
 		:readonly="readonly"
-		:name="inputName">
+		:name="inputName"/>
 </template>
 
 <script>
