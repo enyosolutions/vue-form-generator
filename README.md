@@ -33,7 +33,7 @@ A schema-based form generator component for Vue.js.
 
 ## Documentation
 
-[Online documentation on Gitbook](https://icebob.gitbooks.io/vueformgenerator/content/)
+[Online documentation on Gitbook](https://muschottkey.gitbook.io/vue-form-generator-v3/)
 
 ## Dependencies
 
@@ -43,7 +43,7 @@ While built-in fields don't need external dependencies, optional fields may need
 These dependencies fall into two camps: jQuery or Vanilla. You can find almost the same functionality in both flavors.
 In the end, it's your choice to depend on jQuery or not.
 
-You can find details about dependencies in the official [documentation](https://icebob.gitbooks.io/vueformgenerator/content/) under each specific component.
+You can find details about dependencies in the official [documentation](https://muschottkey.gitbook.io/vue-form-generator-v3/) under each specific component.
 
 ## Installation
 
@@ -54,7 +54,7 @@ You can install it via [NPM](http://npmjs.org/) or [yarn](https://yarnpkg.com/).
 #### Latest version for Vue 2.x
 
 ```
-$ npm install vue-form-generator
+$ npm install https://github.com/muschottkey/vue-form-generator#v3
 ```
 
 #### Legacy version for Vue 1.0.x
@@ -126,14 +126,18 @@ export default {
     schema: {
       fields: [{
         type: "input",
-        inputType: "text",
+        fieldOptions: {
+            inputType: "text"
+        },
         label: "ID (disabled text field)",
         model: "id",
         readonly: true,
         disabled: true
       },{
         type: "input",
-        inputType: "text",
+        fieldOptions: {
+            inputType: "text"
+        },
         label: "Name",
         model: "name",
         placeholder: "Your name",
@@ -141,7 +145,9 @@ export default {
         required: true
       },{
         type: "input",
-        inputType: "password",
+        fieldOptions: {
+            inputType: "password"
+        },
         label: "Password",
         model: "password",
         min: 6,
@@ -155,7 +161,9 @@ export default {
         values: ["Javascript", "VueJS", "CSS3", "HTML5"]
       },{
         type: "input",
-        inputType: "email",
+        fieldOptions: {
+            inputType: "email"
+        },
         label: "E-mail",
         model: "email",
         placeholder: "User's e-mail address"
