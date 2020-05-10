@@ -1,7 +1,6 @@
 <template>
-	<div class="vue-form-generator" 
+	<div class="vue-form-generator"
 v-if="schema != null">
-		<pre>{{ schema }}</pre>
 		<form-group
 			:tag="tag"
 			:fields="fields"
@@ -13,7 +12,7 @@ v-if="schema != null">
 			:event-bus="eventBus"
 		>
 			<template slot="group-legend" slot-scope="{ group, groupLegend }">
-				<slot name="group-legend" :group="group" 
+				<slot name="group-legend" :group="group"
 :group-legend="groupLegend">
 					<legend v-if="groupLegend"><span v-html="groupLegend"></span></legend>
 				</slot>
@@ -35,16 +34,16 @@ v-if="schema != null">
 					:errors="slotProps.errors"
 					:event-bus="eventBus"
 				>
-					<template slot="label" 
+					<template slot="label"
 slot-scope="{ field, getValueFromOption }">
-						<slot name="label" :field="field" 
+						<slot name="label" :field="field"
 :getValueFromOption="getValueFromOption">
 							<span v-html="field.label"></span>
 						</slot>
 					</template>
 
 					<template slot="help" slot-scope="{ field, getValueFromOption }">
-						<slot name="help" :field="field" 
+						<slot name="help" :field="field"
 :getValueFromOption="getValueFromOption">
 							<span v-if="field.help" class="help">
 								<i class="icon"></i>
@@ -54,7 +53,7 @@ slot-scope="{ field, getValueFromOption }">
 					</template>
 
 					<template slot="hint" slot-scope="{ field, getValueFromOption }">
-						<slot name="hint" :field="field" 
+						<slot name="hint" :field="field"
 :getValueFromOption="getValueFromOption">
 							<div class="hint" v-html="getValueFromOption(field, 'hint', undefined)"></div>
 						</slot>
@@ -68,7 +67,7 @@ slot-scope="{ field, getValueFromOption }">
 							:getValueFromOption="getValueFromOption"
 						>
 							<div class="errors help-block">
-								<span v-for="(error, index) in childErrors" :key="index" 
+								<span v-for="(error, index) in childErrors" :key="index"
 v-html="error"></span>
 							</div>
 						</slot>

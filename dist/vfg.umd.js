@@ -11603,6 +11603,14 @@ module.exports = document && document.documentElement;
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, "component", function() { return /* reexport */ formGenerator; });
+__webpack_require__.d(__webpack_exports__, "schema", function() { return /* reexport */ schema_namespaceObject; });
+__webpack_require__.d(__webpack_exports__, "validators", function() { return /* reexport */ utils_validators; });
+__webpack_require__.d(__webpack_exports__, "abstractField", function() { return /* reexport */ abstractField; });
+__webpack_require__.d(__webpack_exports__, "fieldsLoader", function() { return /* reexport */ fieldsLoader_namespaceObject; });
+__webpack_require__.d(__webpack_exports__, "install", function() { return /* reexport */ src_install; });
+
 // NAMESPACE OBJECT: ./src/utils/schema.js
 var schema_namespaceObject = {};
 __webpack_require__.r(schema_namespaceObject);
@@ -11661,8 +11669,8 @@ var es6_function_name = __webpack_require__("7f7f");
 // EXTERNAL MODULE: ./node_modules/core-js/modules/web.dom.iterable.js
 var web_dom_iterable = __webpack_require__("ac6a");
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"90c81c84-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/formGenerator.vue?vue&type=template&id=4def6966&
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return (_vm.schema != null)?_c('div',{staticClass:"vue-form-generator"},[_c('pre',[_vm._v(_vm._s(_vm.schema))]),_c('form-group',{class:_vm.styleClasses,attrs:{"tag":_vm.tag,"fields":_vm.fields,"group":_vm.group,"model":_vm.model,"options":_vm.options,"errors":_vm.errors,"event-bus":_vm.eventBus},scopedSlots:_vm._u([{key:"group-legend",fn:function(ref){
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"90c81c84-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/formGenerator.vue?vue&type=template&id=3c44abf5&
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return (_vm.schema != null)?_c('div',{staticClass:"vue-form-generator"},[_c('form-group',{class:_vm.styleClasses,attrs:{"tag":_vm.tag,"fields":_vm.fields,"group":_vm.group,"model":_vm.model,"options":_vm.options,"errors":_vm.errors,"event-bus":_vm.eventBus},scopedSlots:_vm._u([{key:"group-legend",fn:function(ref){
 var group = ref.group;
 var groupLegend = ref.groupLegend;
 return [_vm._t("group-legend",[(groupLegend)?_c('legend',[_c('span',{domProps:{"innerHTML":_vm._s(groupLegend)}})]):_vm._e()],{group:group,groupLegend:groupLegend})]}},{key:"group-help",fn:function(ref){
@@ -11684,7 +11692,7 @@ return [_vm._t("errors",[_c('div',{staticClass:"errors help-block"},_vm._l((chil
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/formGenerator.vue?vue&type=template&id=4def6966&
+// CONCATENATED MODULE: ./src/formGenerator.vue?vue&type=template&id=3c44abf5&
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es6.promise.js
 var es6_promise = __webpack_require__("551c");
@@ -13507,7 +13515,6 @@ var formElement_component = normalizeComponent(
 
 
 
-//
 //
 //
 //
@@ -25761,14 +25768,16 @@ var src_install = function install(Vue) {
   Vue.component("VueFormGenerator", formGenerator);
 };
 
-/* harmony default export */ var src = ({
+var VueFormGenerator = {
   component: formGenerator,
   schema: schema_namespaceObject,
   validators: utils_validators,
   abstractField: abstractField,
   fieldsLoader: fieldsLoader_namespaceObject,
   install: src_install
-});
+};
+
+/* harmony default export */ var src = (VueFormGenerator);
 // CONCATENATED MODULE: ./node_modules/@vue/cli-service/lib/commands/build/entry-lib.js
 
 
